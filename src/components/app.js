@@ -3,14 +3,20 @@ import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 
 import BookList from './../containers/book-list';
-import BooksReducer from './../reducers/index';
+import BookDetail from './../containers/book_detail';
 
-const store = createStore(BooksReducer);
+import rootReducer from './../reducers/index';
+
+const store = createStore(rootReducer);
+
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
-          <BookList />
+        <div>
+            <BookList />
+            <BookDetail />
+         </div> 
       </Provider>
     );
   }

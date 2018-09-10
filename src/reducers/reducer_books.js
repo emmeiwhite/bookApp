@@ -1,4 +1,4 @@
-export default function(){
+export default function BooksReducer(){
     return [
         {title:"Prophetic Medicine"},
         {title:"Lives of Men"},
