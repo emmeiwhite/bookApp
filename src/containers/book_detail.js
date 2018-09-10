@@ -4,10 +4,14 @@ import {connect} from 'react-redux';
 
 class BookDetail extends Component{
     render(){
+        if(!this.props.book){
+            return (<div>Please Select a book to get its details</div>)
+        }
         return(
             <div className="col-sm-8">
                 <h3>Currently Active Book is :</h3>
-                <h4>{this.props.book.title}</h4>
+                <h4>TITLE : {this.props.book.title}</h4>
+                <h4>Pages : {this.props.book.pages}</h4>
             </div>
         )
     }

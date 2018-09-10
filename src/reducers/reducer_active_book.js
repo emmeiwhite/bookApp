@@ -1,5 +1,5 @@
 // The state passed as the first argument is not the application state but it is only the state the reducer is responsible for.!!!
-export default function ActiveBookReducer(state={title:"Please click on book to be rendered"},action){
+export default function ActiveBookReducer(state=null,action){
     // Every time an action gets despatched from our application it is sent to every reducer.
     switch(action.type){
         case "BOOK_SELECTED":
